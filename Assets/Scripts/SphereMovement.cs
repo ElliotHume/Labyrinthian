@@ -16,32 +16,37 @@ public class SphereMovement : MonoBehaviour {
 	void Start () {
 		sphere = GameObject.Find ("Sphere");
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(pressUp)) {
+
+		float yAxis = Input.GetAxis ("Vertical");
+		float zAxis = Input.GetAxis ("Horizontal");
+		Debug.Log (yAxis);
+
+		if (Input.GetKey(pressUp) || yAxis == -1) {
 			//GetComponent<Transform> ().eulerAngles += new Vector3 (1, 0, 0);
-			sphere.transform.Rotate(50.0f * Time.deltaTime, 0.0f, 0.0f, Space.World);
+			sphere.transform.Rotate(40.0f * Time.deltaTime, 0.0f, 0.0f, Space.World);
 		}
 		if (Input.GetKey(pressRight)) {
 			//GetComponent<Transform> ().eulerAngles += new Vector3 (0, -1, 0);
-			sphere.transform.Rotate(0.0f, 50.0f * Time.deltaTime, 0.0f, Space.World);
+			sphere.transform.Rotate(0.0f, 40.0f * Time.deltaTime, 0.0f, Space.World);
 		}
-		if (Input.GetKey(pressDown)) {
+		if (Input.GetKey(pressDown) || yAxis == 1) {
 			//GetComponent<Transform> ().eulerAngles += new Vector3 (-1, 0, 0);
-			sphere.transform.Rotate(-50.0f * Time.deltaTime, 0.0f, 0.0f, Space.World);
+			sphere.transform.Rotate(-40.0f * Time.deltaTime, 0.0f, 0.0f, Space.World);
 		}
 		if (Input.GetKey(pressLeft)) {
 			//GetComponent<Transform> ().eulerAngles += new Vector3 (0, 1, 0);
-			sphere.transform.Rotate(0.0f, -50.0f * Time.deltaTime, 0.0f, Space.World);
+			sphere.transform.Rotate(0.0f, -40.0f * Time.deltaTime, 0.0f, Space.World);
 		}
-		if (Input.GetKey(clockwise)) {
+		if (Input.GetKey(clockwise) || zAxis == 1) {
 			//GetComponent<Transform> ().eulerAngles += new Vector3 (0, 1, 0);
-			sphere.transform.Rotate(0.0f, 0.0f, -50.0f * Time.deltaTime, Space.World);
+			sphere.transform.Rotate(0.0f, 0.0f, -40.0f * Time.deltaTime, Space.World);
 		}
-		if (Input.GetKey(counterClockwise)) {
+		if (Input.GetKey(counterClockwise) || zAxis == -1) {
 			//GetComponent<Transform> ().eulerAngles += new Vector3 (0, 1, 0);
-			sphere.transform.Rotate(0.0f, 0.0f, 50.0f * Time.deltaTime, Space.World);
+			sphere.transform.Rotate(0.0f, 0.0f, 40.0f * Time.deltaTime, Space.World);
 		}
 	}
 }
