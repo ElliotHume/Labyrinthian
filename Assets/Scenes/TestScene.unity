@@ -242,8 +242,7 @@ Transform:
 --- !u!114 &370866947
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114631935916160826, guid: e796e0e10284b5b488feb28596e203fc,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370866940}
   m_Enabled: 1
@@ -571,6 +570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7cba79e851a9042b2928a5dde0a6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: Level1
+  pillMesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1794842624
 Prefab:
   m_ObjectHideFlags: 0

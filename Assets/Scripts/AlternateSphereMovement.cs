@@ -43,11 +43,11 @@ public class AlternateSphereMovement : MonoBehaviour
 
         //Debug.Log (Input.GetKey("joystick button 0"));
 
-        //float yAxis = Input.GetAxis ("Vertical");
-        //float zAxis = Input.GetAxis ("Horizontal");
-        //Debug.Log (yAxis);
-        float yAxis = 0;
-        float zAxis = 0;
+        float yAxis = Input.GetAxis ("Vertical");
+        float zAxis = Input.GetAxis ("Horizontal");
+        Debug.Log (yAxis);
+        //float yAxis = 0;
+        //float zAxis = 0;
 
         Vector3 rotation = sphere.transform.rotation.eulerAngles;
         //Debug.Log (rotation);
@@ -107,7 +107,7 @@ public class AlternateSphereMovement : MonoBehaviour
     }
     public void moveSphere()
     {
-        movementSpeed = 40.0f * Time.deltaTime;
+        //movementSpeed = 40.0f * Time.deltaTime;
         if (Up)
             sphere.transform.Rotate(movementSpeed, 0.0f, 0.0f, Space.World);
         if (Right)

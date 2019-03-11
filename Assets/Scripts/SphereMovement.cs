@@ -29,11 +29,11 @@ public class SphereMovement : MonoBehaviour {
 
 		//Debug.Log (Input.GetKey("joystick button 0"));
 
-		//float yAxis = Input.GetAxis ("Vertical");
-		//float zAxis = Input.GetAxis ("Horizontal");
+		float yAxis = Input.GetAxis ("Vertical");
+		float zAxis = Input.GetAxis ("Horizontal");
 		//Debug.Log (yAxis);
-		float yAxis = 0;
-		float zAxis = 0;
+		//float yAxis = 0;
+		//float zAxis = 0;
 
 
 		Vector3 rotation = sphere.transform.rotation.eulerAngles;
@@ -42,13 +42,13 @@ public class SphereMovement : MonoBehaviour {
 		if (Input.GetKey(pressUp) || yAxis == -1) {
 			sphere.transform.Rotate(movementSpeed, 0.0f, 0.0f, Space.World);
 		}
-		if (Input.GetKey(pressRight) || Input.GetKey("joystick button 0")) {
+		if (Input.GetKey(pressRight)) {
 			sphere.transform.Rotate(0.0f, movementSpeed, 0.0f, Space.World);
 		}
 		if (Input.GetKey(pressDown) || yAxis == 1) {
 			sphere.transform.Rotate(-movementSpeed, 0.0f, 0.0f, Space.World);
 		}
-		if (Input.GetKey(pressLeft) || Input.GetKey("joystick button 1")) {
+		if (Input.GetKey(pressLeft)) {
 			sphere.transform.Rotate(0.0f, -movementSpeed, 0.0f, Space.World);
 		}
 		if (Input.GetKey(clockwise) || zAxis == 1) {
@@ -57,5 +57,7 @@ public class SphereMovement : MonoBehaviour {
 		if (Input.GetKey(counterClockwise) || zAxis == -1) {
 			sphere.transform.Rotate(0.0f, 0.0f, movementSpeed, Space.World);
 		}
+
+
 	}
 }
