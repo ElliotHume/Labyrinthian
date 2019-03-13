@@ -39,16 +39,16 @@ public class SphereMovement : MonoBehaviour {
 		Vector3 rotation = sphere.transform.rotation.eulerAngles;
 		//Debug.Log (rotation);
 
-		if (Input.GetKey(pressUp) || yAxis == -1) {
+		if (Input.GetKey(pressUp)) {
 			sphere.transform.Rotate(movementSpeed, 0.0f, 0.0f, Space.World);
 		}
-		if (Input.GetKey(pressRight)) {
+		if (Input.GetKey(pressRight) || yAxis == -1) {
 			sphere.transform.Rotate(0.0f, movementSpeed, 0.0f, Space.World);
 		}
-		if (Input.GetKey(pressDown) || yAxis == 1) {
+		if (Input.GetKey(pressDown)) {
 			sphere.transform.Rotate(-movementSpeed, 0.0f, 0.0f, Space.World);
 		}
-		if (Input.GetKey(pressLeft)) {
+		if (Input.GetKey(pressLeft) || yAxis == 1) {
 			sphere.transform.Rotate(0.0f, -movementSpeed, 0.0f, Space.World);
 		}
 		if (Input.GetKey(clockwise) || zAxis == 1) {
