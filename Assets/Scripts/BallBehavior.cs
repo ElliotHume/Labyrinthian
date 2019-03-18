@@ -13,6 +13,8 @@ public class BallBehavior : MonoBehaviour {
 	private GameObject sphere;
 	public Stopwatch timer = new Stopwatch();
 
+	public UnityEngine.UI.Text timerText;
+
 	void OnTriggerEnter (Collider col) {
 		if (col.gameObject.tag == "Finish") {
 			timer.Stop ();
@@ -35,6 +37,7 @@ public class BallBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		timerText.text = Convert.ToString (Math.Round (timer.Elapsed.TotalSeconds, 2));
 	}
 
 	public void changeMesh ( Mesh mesh ) {

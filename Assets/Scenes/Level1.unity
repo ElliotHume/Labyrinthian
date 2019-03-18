@@ -158,6 +158,11 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 114072331621643918, guid: e796e0e10284b5b488feb28596e203fc,
+        type: 2}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 886997289}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e796e0e10284b5b488feb28596e203fc, type: 2}
   m_IsPrefabParent: 0
@@ -297,6 +302,14 @@ Prefab:
         type: 2}
       propertyPath: m_Color.r
       value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114084055825373264, guid: 27d80d283c842d84b9fa137c91eb74db,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Current Best: 4.77s
+
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27d80d283c842d84b9fa137c91eb74db, type: 2}
@@ -493,6 +506,7 @@ MonoBehaviour:
   pillMesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   sphereMesh: {fileID: 0}
   activeMovement: sphere
+  timer: {fileID: 0}
 --- !u!4 &873146556
 Transform:
   m_ObjectHideFlags: 0
@@ -506,6 +520,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &886997289 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114286340530474200, guid: 27d80d283c842d84b9fa137c91eb74db,
+    type: 2}
+  m_PrefabInternal: {fileID: 527264481}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &898462529
 GameObject:
   m_ObjectHideFlags: 0

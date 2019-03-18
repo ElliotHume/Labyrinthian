@@ -404,7 +404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &930157560
 GameObject:
@@ -469,7 +469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50.407, y: -136.613, z: -45.638}
 --- !u!1 &1002287631
 GameObject:
@@ -482,7 +482,6 @@ GameObject:
   - component: {fileID: 1002287634}
   - component: {fileID: 1002287633}
   - component: {fileID: 1002287632}
-  - component: {fileID: 1002287636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -650,9 +649,23 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114084055825373264, guid: 27d80d283c842d84b9fa137c91eb74db,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Current Best: 3.89s
+
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27d80d283c842d84b9fa137c91eb74db, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1043981602 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114286340530474200, guid: 27d80d283c842d84b9fa137c91eb74db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1043981601}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1142370056
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: Level1
+  timerText: {fileID: 1043981602}
 --- !u!1 &1299888935
 GameObject:
   m_ObjectHideFlags: 0

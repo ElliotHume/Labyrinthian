@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: Level2
+  timerText: {fileID: 1596680931}
 --- !u!54 &911832958
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -695,26 +696,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553269673988986, guid: 27d80d283c842d84b9fa137c91eb74db,
-        type: 2}
-      propertyPath: isNoGravLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553269673988986, guid: 27d80d283c842d84b9fa137c91eb74db,
-        type: 2}
-      propertyPath: isBigBallLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553269673988986, guid: 27d80d283c842d84b9fa137c91eb74db,
-        type: 2}
-      propertyPath: isPillLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553269673988986, guid: 27d80d283c842d84b9fa137c91eb74db,
-        type: 2}
-      propertyPath: isFlipLocked
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27d80d283c842d84b9fa137c91eb74db, type: 2}
@@ -993,6 +974,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c2695d91e2bd59479556151d9d0a064, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1596680931 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114286340530474200, guid: 27d80d283c842d84b9fa137c91eb74db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1157829916}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1762978843 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4147824304527604, guid: 8c2695d91e2bd59479556151d9d0a064,

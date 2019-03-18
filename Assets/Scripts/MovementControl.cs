@@ -15,7 +15,7 @@ public class MovementControl : MonoBehaviour {
 	public Mesh sphereMesh;
 
 	public string activeMovement = "sphere";
-
+	public UnityEngine.UI.Text timer;
 
 	private KeyCode pressUp = KeyCode.W;
 	private KeyCode pressLeft = KeyCode.A;
