@@ -153,11 +153,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114072331621643918, guid: e796e0e10284b5b488feb28596e203fc,
-        type: 2}
-      propertyPath: nextLevel
-      value: Level2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e796e0e10284b5b488feb28596e203fc, type: 2}
   m_IsPrefabParent: 0
@@ -171,7 +166,7 @@ GameObject:
   - component: {fileID: 873146556}
   - component: {fileID: 873146555}
   m_Layer: 0
-  m_Name: MovementController
+  m_Name: Movement Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,6 +190,7 @@ MonoBehaviour:
   rotateClockwise: 0
   rotateCounterClockwise: 0
   pillMesh: {fileID: 0}
+  sphereMesh: {fileID: 0}
   activeMovement: sphere
 --- !u!4 &873146556
 Transform:
@@ -285,6 +281,7 @@ GameObject:
   - component: {fileID: 1271264381}
   - component: {fileID: 1271264380}
   - component: {fileID: 1271264379}
+  - component: {fileID: 1271264383}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -355,3 +352,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 13.265, y: 0, z: 0}
+--- !u!114 &1271264383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271264378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63707c45047a8473fb8a9c9e4ab06aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
