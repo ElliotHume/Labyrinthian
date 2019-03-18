@@ -27,13 +27,14 @@ public class MovementControl : MonoBehaviour {
 	private SphereMovement sphere;
 	private BallBehavior ball;
 	private CameraMovement camera;
+	private UIBehavior uiControls;
 
 	// Use this for initialization
 	void Start () {
 		sphere = GameObject.Find ("Sphere").GetComponent<SphereMovement> ();
 		ball = GameObject.Find ("Ball").GetComponent<BallBehavior> ();
 		camera = GameObject.Find ("Main Camera").GetComponent<CameraMovement> ();
-
+		uiControls = GameObject.Find ("ButtonsPanel").GetComponent<UIBehavior> ();
 	}
 	
 	// Update is called once per frame
@@ -53,33 +54,38 @@ public class MovementControl : MonoBehaviour {
 
 		// Listen for button Inputs
 
-		if (Input.GetKeyDown ("joystick button 0")) {
+		if (Input.GetKeyDown ("joystick button 0") || Input.GetKeyDown("c")) {
 			if (activeMovement == "sphere") {
 				activeMovement = "camera";
 			} else {
 				activeMovement = "sphere";
 				camera.reset ();
 			}
+			uiControls.toggleCamera ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyUp ("joystick button 1")) {
+		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyUp ("joystick button 1") || Input.GetKeyDown("g")) {
 			ball.toggleGravity ();
+			uiControls.toggleNoGrav ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 2")) {
+		if (Input.GetKeyDown ("joystick button 2") || Input.GetKeyDown("f")) {
 			sphere.invertSphereVert ();
+			uiControls.toggleFlip ();
 		}
 
 		if (Input.GetKeyDown ("joystick button 3")) {
 			ball.toggleShereAsParent ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 4")) {
+		if (Input.GetKeyDown ("joystick button 4") || Input.GetKeyDown("b")) {
 			ball.toggleSizeIncrease ();
+			uiControls.toggleBigBall ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 5")) {
+		if (Input.GetKeyDown ("joystick button 5") || Input.GetKeyDown("p")) {
 			ball.changeMesh (pillMesh);
+			uiControls.togglePill();
 		}
 
 
