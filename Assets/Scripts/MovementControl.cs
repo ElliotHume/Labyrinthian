@@ -43,12 +43,12 @@ public class MovementControl : MonoBehaviour {
 		float zAxis = Input.GetAxis ("Horizontal");
 
 		// Listen to inputs for movement commands and set movement flags
-		moveUp = Input.GetKey (KeyCode.W);
-		moveLeft = Input.GetKey (KeyCode.A);
-		moveDown = Input.GetKey (KeyCode.S);
-		moveRight = Input.GetKey (KeyCode.D);
-		rotateClockwise = Input.GetKey (KeyCode.E);
-		rotateCounterClockwise = Input.GetKey (KeyCode.Q);
+		moveUp = Input.GetKey (KeyCode.W) || yAxis == -1 && Input.GetKey (KeyCode.Z);
+		moveLeft = Input.GetKey (KeyCode.A) || yAxis == 1 && !Input.GetKey (KeyCode.Z);
+		moveDown = Input.GetKey (KeyCode.S) || yAxis == 1 && Input.GetKey (KeyCode.Z);
+		moveRight = Input.GetKey (KeyCode.D) || yAxis == -1 && !Input.GetKey (KeyCode.Z);
+		rotateClockwise = Input.GetKey (KeyCode.E)|| zAxis  == -1;
+		rotateCounterClockwise = Input.GetKey (KeyCode.Q) || zAxis == 1;
 
 
 		// Listen for button Inputs
@@ -62,7 +62,7 @@ public class MovementControl : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyUp ("joystick button 1")) {
+		if (Input.GetKeyDown ("joystick button 1")) {
 			ball.toggleGravity ();
 		}
 
@@ -70,15 +70,15 @@ public class MovementControl : MonoBehaviour {
 			sphere.invertSphereVert ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 3")) {
-			ball.toggleShereAsParent ();
-		}
+//		if (Input.GetKeyDown ("joystick button 5")) {
+//			ball.toggleShereAsParent ();
+//		}
 
 		if (Input.GetKeyDown ("joystick button 4")) {
 			ball.toggleSizeIncrease ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 5")) {
+		if (Input.GetKeyDown ("joystick button 3")) {
 			ball.changeMesh (pillMesh);
 		}
 

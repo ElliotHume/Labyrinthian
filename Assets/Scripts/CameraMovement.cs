@@ -16,6 +16,7 @@ public class CameraMovement : MonoBehaviour {
 	void Start () {
 		sphere = GameObject.Find ("Sphere").GetComponent<Transform>();
 		spherePosition = sphere.position;
+
 		startingRotation = gameObject.transform.rotation;
 		startingPosition = gameObject.transform.position;
 		moveCtrl = GameObject.Find("Movement Controller").GetComponent<MovementControl>();
@@ -27,17 +28,24 @@ public class CameraMovement : MonoBehaviour {
 		if (moveCtrl.activeMovement == "camera") {
 			
 			if (moveCtrl.moveUp) {
-				transform.RotateAround (spherePosition, Vector3.left, movementSpeed);
+				Debug.Log (transform.rotation.eulerAngles [0]);
+				if (transform.rotation.eulerAngles [0] <= 80 || transform.rotation.eulerAngles [0] >= 270) {
+					transform.RotateAround (sphere.transform.localPosition, transform.right, movementSpeed);
+				}
+
 				//gameObject.transform.Translate(Vector3.up * movementSpeed);
 			}
 			if (moveCtrl.moveLeft) {
-				transform.RotateAround (spherePosition, Vector3.up, movementSpeed);
+				transform.RotateAround (sphere.transform.position, Vector3.down, movementSpeed);
 			}
 			if (moveCtrl.moveDown) {
-				transform.RotateAround (spherePosition, Vector3.right, movementSpeed);
+				Debug.Log (transform.rotation.eulerAngles [0]);
+				if (transform.rotation.eulerAngles [0] >= 280 || transform.rotation.eulerAngles [0] <= 90 ) {
+					transform.RotateAround (sphere.transform.localPosition, -transform.right, movementSpeed);
+				}
 			}
 			if (moveCtrl.moveRight) {
-				transform.RotateAround (spherePosition, Vector3.down, movementSpeed);
+				transform.RotateAround (sphere.transform.position, Vector3.up, movementSpeed);
 			}
 
 			gameObject.transform.LookAt(sphere);
