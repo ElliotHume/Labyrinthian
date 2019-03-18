@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b7b81ebbe36017a489fa9efb826111de, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -445,7 +445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1002287631}
   m_LocalRotation: {x: 0.11550401, y: -0, z: -0, w: 0.993307}
-  m_LocalPosition: {x: 0, y: 6.87, z: -10.4}
+  m_LocalPosition: {x: 0, y: 6.77, z: -9.98}
   m_LocalScale: {x: 6.2115245, y: 93.271385, z: -1.6904714}
   m_Children: []
   m_Father: {fileID: 0}
@@ -611,6 +611,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23525318834698890, guid: 8c2695d91e2bd59479556151d9d0a064,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dcb5c476ace04fa6b9132145b333b86, type: 2}
+    - target: {fileID: 23968595738232896, guid: 8c2695d91e2bd59479556151d9d0a064,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dcb5c476ace04fa6b9132145b333b86, type: 2}
+    - target: {fileID: 23702522259084878, guid: 8c2695d91e2bd59479556151d9d0a064,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dcb5c476ace04fa6b9132145b333b86, type: 2}
+    - target: {fileID: 23172633318151808, guid: 8c2695d91e2bd59479556151d9d0a064,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dcb5c476ace04fa6b9132145b333b86, type: 2}
+    - target: {fileID: 23096533804072716, guid: 8c2695d91e2bd59479556151d9d0a064,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dcb5c476ace04fa6b9132145b333b86, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c2695d91e2bd59479556151d9d0a064, type: 2}
   m_IsPrefabParent: 0
