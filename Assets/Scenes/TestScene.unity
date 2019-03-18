@@ -255,6 +255,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4147824304527604, guid: 8c2695d91e2bd59479556151d9d0a064,
     type: 2}
   m_PrefabInternal: {fileID: 1794842624}
+--- !u!1001 &573564539
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.02612
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.3477192
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.504836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495582009040402, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a5e2f15ddf1bf4766993ba3ba8a83348, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &584699279
 Prefab:
   m_ObjectHideFlags: 0
@@ -440,6 +482,7 @@ GameObject:
   - component: {fileID: 1002287634}
   - component: {fileID: 1002287633}
   - component: {fileID: 1002287632}
+  - component: {fileID: 1002287636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera

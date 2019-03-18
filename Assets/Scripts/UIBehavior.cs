@@ -68,9 +68,9 @@ public class UIBehavior : MonoBehaviour {
 
 	public void toggleBigBall(){
 		if (!isBigBall) {
-			bigBallButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 255);
+			bigBallButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 255);
 		} else {
-			bigBallButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 120);
+			bigBallButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 120);
 		}
 		isBigBall = !isBigBall;
 	}
@@ -81,9 +81,9 @@ public class UIBehavior : MonoBehaviour {
 
 	public void toggleFlip(){
 		if (!isFlipped) {
-			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 255);
+			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 255);
 		} else {
-			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 120);
+			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 120);
 		}
 		isFlipped = !isFlipped;
 	}
