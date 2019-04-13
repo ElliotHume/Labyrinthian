@@ -19,7 +19,7 @@ public class BallBehavior : MonoBehaviour {
 		if (col.gameObject.tag == "Finish") {
 			timer.Stop ();
 			LevelManager.recordScore ( Convert.ToSingle(Math.Round(timer.Elapsed.TotalSeconds, 2)));
-			LevelManager.loadLevel(LevelManager.currentLevel + 1);
+			LevelManager.nextLevel();
 		}
 	}
 
@@ -38,6 +38,14 @@ public class BallBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timerText.text = Convert.ToString (Math.Round (timer.Elapsed.TotalSeconds, 2));
+
+		if (LevelManager.isPaused) {
+			timer.Stop ();
+		} else {
+			if (!timer.IsRunning) {
+				timer.Start ();
+			}
+		}
 	}
 
 	public void changeMesh ( Mesh mesh ) {

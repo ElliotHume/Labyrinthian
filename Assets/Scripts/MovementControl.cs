@@ -54,6 +54,10 @@ public class MovementControl : MonoBehaviour {
 
 		// Listen for button Inputs
 
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			LevelManager.togglePause ();
+		}
+
 		if (Input.GetKeyDown ("joystick button 0") || Input.GetKeyDown("c")) {
 			if (activeMovement == "sphere") {
 				activeMovement = "camera";
