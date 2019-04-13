@@ -18,5 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/NoGravTuturial.unity
     guid: 48254e8779333b04c89f79bb997ddeab
   - enabled: 1
+    path: Assets/Scenes/FlipTutorial.unity
+    guid: 67e32c9159f462547bf1e1d01aa2e375
+  - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 67a669b67e65ec343b230ded8e54bb2e
