@@ -66,13 +66,13 @@ public class BallBehavior : MonoBehaviour {
 		gameObject.GetComponent<Rigidbody> ().useGravity = !gameObject.GetComponent<Rigidbody> ().useGravity;
 	}
 
-	public void toggleShereAsParent () {
-		if (sphereAsParent) {
-			gameObject.transform.SetParent (gameObject.transform.parent.parent);
-		} else {
-			gameObject.transform.SetParent (sphere.transform);
-		}
-		sphereAsParent = !sphereAsParent;
-	}
+//	public void toggleShereAsParent () {
+//		if (sphereAsParent) {
+//			gameObject.transform.SetParent (gameObject.transform.parent.parent);
+//		} else {
+//			gameObject.transform.SetParent (sphere.transform);
+//		}
+//		sphereAsParent = !sphereAsParent;
+//	}
 
 }
