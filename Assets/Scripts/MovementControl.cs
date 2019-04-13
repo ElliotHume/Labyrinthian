@@ -25,16 +25,24 @@ public class MovementControl : MonoBehaviour {
 	private KeyCode counterClockwise = KeyCode.E;
 
 	private SphereMovement sphere;
+	private GameObject sphereObject;
 	private BallBehavior ball;
 	private CameraMovement camera;
-	private UIBehavior uiControls;
+	private UIBehavior uiFunctions;
+	private GameObject uiPanel;
+	private GameObject escapeMenu;
+	private findChildComponent canvas;
 
 	// Use this for initialization
 	void Start () {
-		sphere = GameObject.Find ("Sphere").GetComponent<SphereMovement> ();
+		sphereObject = GameObject.Find ("Sphere");
+		sphere = sphereObject.GetComponent<SphereMovement> ();
 		ball = GameObject.Find ("Ball").GetComponent<BallBehavior> ();
 		camera = GameObject.Find ("Main Camera").GetComponent<CameraMovement> ();
-		uiControls = GameObject.Find ("ButtonsPanel").GetComponent<UIBehavior> ();
+		canvas = GameObject.Find ("Canvas").GetComponent<findChildComponent> ();
+		uiPanel = canvas.FindObject("ButtonsPanel");
+		escapeMenu = canvas.FindObject("EscapeMenu");
+		uiFunctions = uiPanel.GetComponent<UIBehavior> ();
 	}
 	
 	// Update is called once per frame
@@ -55,7 +63,8 @@ public class MovementControl : MonoBehaviour {
 		// Listen for button Inputs
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			LevelManager.togglePause ();
+			togglePause ();
+
 		}
 
 		if (Input.GetKeyDown ("joystick button 0") || Input.GetKeyDown("c")) {
@@ -65,17 +74,17 @@ public class MovementControl : MonoBehaviour {
 				activeMovement = "sphere";
 				camera.reset ();
 			}
-			uiControls.toggleCamera ();
+			uiFunctions.toggleCamera ();
 		}
 
 		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyUp ("joystick button 1") || Input.GetKeyDown("g")) {
 			ball.toggleGravity ();
-			uiControls.toggleNoGrav ();
+			uiFunctions.toggleNoGrav ();
 		}
 
 		if (Input.GetKeyDown ("joystick button 2") || Input.GetKeyDown("f")) {
 			sphere.invertSphereVert ();
-			uiControls.toggleFlip ();
+			uiFunctions.toggleFlip ();
 		}
 
 //		if (Input.GetKeyDown ("joystick button 5")) {
@@ -84,14 +93,21 @@ public class MovementControl : MonoBehaviour {
 
 		if (Input.GetKeyDown ("joystick button 4") || Input.GetKeyDown("b")) {
 			ball.toggleSizeIncrease ();
-			uiControls.toggleBigBall ();
+			uiFunctions.toggleBigBall ();
 		}
 
 		if (Input.GetKeyDown ("joystick button 3") || Input.GetKeyDown("p")) {
 			ball.changeMesh (pillMesh);
-			uiControls.togglePill();
+			uiFunctions.togglePill();
 		}
 
 
+	}
+
+	public void togglePause() {
+		LevelManager.togglePause ();
+		sphereObject.SetActive (!sphereObject.activeInHierarchy);
+		escapeMenu.SetActive (!escapeMenu.activeInHierarchy);
+		uiPanel.SetActive (!uiPanel.activeInHierarchy);
 	}
 }
