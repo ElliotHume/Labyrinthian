@@ -55,13 +55,16 @@ public class MovementControl : MonoBehaviour {
 		float yAxis = Input.GetAxis ("Vertical");
 		float zAxis = Input.GetAxis ("Horizontal");
 
+		float yAxis2 = Input.GetAxis ("Fire1");
+		float zAxis2 = Input.GetAxis ("Jump");
+
 		// Listen to inputs for movement commands and set movement flags
-		moveUp = Input.GetKey (KeyCode.W) || yAxis == -1 && Input.GetKey (KeyCode.Z);
-		moveLeft = Input.GetKey (KeyCode.A) || yAxis == 1 && !Input.GetKey (KeyCode.Z);
-		moveDown = Input.GetKey (KeyCode.S) || yAxis == 1 && Input.GetKey (KeyCode.Z);
-		moveRight = Input.GetKey (KeyCode.D) || yAxis == -1 && !Input.GetKey (KeyCode.Z);
-		rotateClockwise = Input.GetKey (KeyCode.E)|| zAxis  == -1;
-		rotateCounterClockwise = Input.GetKey (KeyCode.Q) || zAxis == 1;
+		moveUp = Input.GetKey (KeyCode.W) || (yAxis == 1 && yAxis2 == 1);
+		moveLeft = Input.GetKey (KeyCode.A) || (yAxis == -1 && yAxis2 == 1);
+		moveDown = Input.GetKey (KeyCode.S) || (yAxis == -1 && yAxis2 == -1);
+		moveRight = Input.GetKey (KeyCode.D) || (yAxis == 1 && yAxis2 == -1);
+		rotateClockwise = Input.GetKey (KeyCode.E)|| (zAxis  == 1 && zAxis2 == 1);
+		rotateCounterClockwise = Input.GetKey (KeyCode.Q) || (zAxis == -1 && zAxis2 == -1);
 
 
 		// Listen for button Inputs

@@ -54,18 +54,18 @@ public class UIBehavior : MonoBehaviour {
 
 	public void toggleCamera(){
 		if (!isCameraMode) {
-			cameraButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 255);
+			cameraButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 255);
 		} else {
-			cameraButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 120);
+			cameraButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 120);
 		}
 		isCameraMode = !isCameraMode;
 	}
 
 	public void toggleNoGrav(){
 		if (!isNoGrav) {
-			noGravButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 255);
+			noGravButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 255);
 		} else {
-			noGravButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 120);
+			noGravButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 120);
 		}
 		isNoGrav = !isNoGrav;
 	}
@@ -85,9 +85,9 @@ public class UIBehavior : MonoBehaviour {
 
 	public void toggleFlip(){
 		if (!isFlipped) {
-			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 255);
+			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 255);
 		} else {
-			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (100, 80, 255, 120);
+			flipButton.GetComponent<UnityEngine.UI.RawImage> ().color = new Color32 (230, 75, 75, 120);
 		}
 		isFlipped = !isFlipped;
 	}

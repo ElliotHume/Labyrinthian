@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.393166, g: 0.32352942, b: 1, a: 0.471}
+  m_Color: {r: 0.90588236, g: 0.28627452, b: 0.28627452, a: 0.47058824}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2290,10 +2290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d07c01ace0484418823e2ba45c9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNoGravLocked: 0
-  isBigBallLocked: 0
+  isNoGravLocked: 1
+  isBigBallLocked: 1
   isPillLocked: 0
-  isFlipLocked: 0
+  isFlipLocked: 1
 --- !u!114 &114149806563354446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4382,7 +4382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9019608, g: 0.29411766, b: 0.29411766, a: 0.47058824}
+  m_Color: {r: 0.39215687, g: 0.3137255, b: 1, a: 0.47058824}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4850,7 +4850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.393166, g: 0.3137255, b: 1, a: 0.471}
+  m_Color: {r: 0.90588236, g: 0.28627452, b: 0.28627452, a: 0.47058824}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4993,10 +4993,10 @@ MonoBehaviour:
   moveRight: 0
   rotateClockwise: 0
   rotateCounterClockwise: 0
-  isNoGravLocked: 0
-  isBigBallLocked: 0
+  isNoGravLocked: 1
+  isBigBallLocked: 1
   isPillLocked: 0
-  isFlipLocked: 0
+  isFlipLocked: 1
   pillMesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   sphereMesh: {fileID: 0}
   activeMovement: sphere

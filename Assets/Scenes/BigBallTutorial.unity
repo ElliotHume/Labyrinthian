@@ -821,6 +821,51 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isBigBallLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isNoGravLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isPillLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isFlipLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isFlipLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isBigBallLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isNoGravLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224505632258950026, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224505632258950026, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba692ed871173404985afc7567f2020e, type: 2}
   m_IsPrefabParent: 0
@@ -1263,6 +1308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: Level1
+  timer: 0
   timerText: {fileID: 1185602386}
 --- !u!54 &2094393045
 Rigidbody:
