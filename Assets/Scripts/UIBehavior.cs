@@ -31,15 +31,19 @@ public class UIBehavior : MonoBehaviour {
 
 		if (isNoGravLocked) {
 			noGravButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[1].color = new Color32 (255, 255, 255, 120);
+			noGravButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[2].color = new Color32 (255, 255, 255, 0);
 		}
 		if (isBigBallLocked) {
 			bigBallButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[1].color = new Color32 (255, 255, 255, 120);
+			bigBallButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[2].color = new Color32 (255, 255, 255, 0);
 		}
 		if (isPillLocked) {
 			pillButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[1].color = new Color32 (255, 255, 255, 120);
+			pillButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[2].color = new Color32 (255, 255, 255, 0);
 		}
 		if (isFlipLocked) {
 			flipButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[1].color = new Color32 (255, 255, 255, 120);
+			flipButton.GetComponentsInChildren<UnityEngine.UI.RawImage> ()[2].color = new Color32 (255, 255, 255, 0);
 		}
 	}
 	

@@ -11,6 +11,11 @@ public class MovementControl : MonoBehaviour {
 	public bool rotateClockwise;
 	public bool rotateCounterClockwise;
 
+	public bool isNoGravLocked;
+	public bool isBigBallLocked;
+	public bool isPillLocked;
+	public bool isFlipLocked;
+
 	public Mesh pillMesh;
 	public Mesh sphereMesh;
 
@@ -77,13 +82,17 @@ public class MovementControl : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyUp ("joystick button 1") || Input.GetKeyDown("g")) {
-			ball.toggleGravity ();
-			uiFunctions.toggleNoGrav ();
+			if (!isNoGravLocked) {
+				ball.toggleGravity ();
+				uiFunctions.toggleNoGrav ();
+			}
 		}
 
 		if (Input.GetKeyDown ("joystick button 2") || Input.GetKeyDown("f")) {
-			sphere.invertSphereVert ();
-			uiFunctions.toggleFlip ();
+			if (!isFlipLocked) {
+				sphere.invertSphereVert ();
+				uiFunctions.toggleFlip ();
+			}
 		}
 
 //		if (Input.GetKeyDown ("joystick button 5")) {
@@ -91,13 +100,17 @@ public class MovementControl : MonoBehaviour {
 //		}
 
 		if (Input.GetKeyDown ("joystick button 4") || Input.GetKeyDown("b")) {
-			ball.toggleSizeIncrease ();
-			uiFunctions.toggleBigBall ();
+			if (!isBigBallLocked) {
+				ball.toggleSizeIncrease ();
+				uiFunctions.toggleBigBall ();
+			}
 		}
 
 		if (Input.GetKeyDown ("joystick button 3") || Input.GetKeyDown("p")) {
-			ball.changeMesh (pillMesh);
-			uiFunctions.togglePill();
+			if (!isPillLocked) {
+				ball.changeMesh (pillMesh);
+				uiFunctions.togglePill();
+			}
 		}
 
 

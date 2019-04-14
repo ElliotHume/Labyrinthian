@@ -708,6 +708,36 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isNoGravLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isBigBallLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isFlipLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isFlipLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isBigBallLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isNoGravLocked
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba692ed871173404985afc7567f2020e, type: 2}
   m_IsPrefabParent: 0
