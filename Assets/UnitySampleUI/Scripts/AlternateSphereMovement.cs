@@ -45,12 +45,8 @@ public class AlternateSphereMovement : MonoBehaviour
 
         float yAxis = Input.GetAxis ("Vertical");
         float zAxis = Input.GetAxis ("Horizontal");
-        Debug.Log (yAxis);
-        //float yAxis = 0;
-        //float zAxis = 0;
 
         Vector3 rotation = sphere.transform.rotation.eulerAngles;
-        //Debug.Log (rotation);
 
         //set flags as true when pressed
         if (Input.GetKeyDown(pressUp) || yAxis == -1)

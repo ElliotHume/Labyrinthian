@@ -13,8 +13,6 @@ public class MainMenuFunctions : MonoBehaviour {
 	void Update () {
 		if ((Input.GetAxis ("Fire2") != 0 || Input.GetAxis ("Fire3") != 0) && buttonSelected == false) {
 			if (selectedObject != null) {
-				Debug.Log ("Ive been messing myself up");
-				Debug.Log (Input.GetAxis ("Fire2")); 
 				eventSystem.SetSelectedGameObject (selectedObject);
 				buttonSelected = true;
 			}

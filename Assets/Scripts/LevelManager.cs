@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public static class LevelManager {
-	public static string[] levels = new string[] {"TestScene","Level1","Level2"};
-	public static float[] scores = new float[levels.Length];
+	public static float[] scores = new float[SceneManager.sceneCountInBuildSettings];
 	public static bool isPaused = false;
 
 	public static void togglePause () {
@@ -35,9 +34,9 @@ public static class LevelManager {
 	}
 
 	public static bool recordScore (float timeScore) {
-		Debug.Log (timeScore);
-		if (scores[SceneManager.GetActiveScene().buildIndex] == 0.0f || timeScore < scores[SceneManager.GetActiveScene().buildIndex]) {
-			scores[SceneManager.GetActiveScene().buildIndex] = timeScore;
+		int levelIndex = SceneManager.GetActiveScene ().buildIndex;
+		if (scores[levelIndex] == 0.0f || timeScore < scores[levelIndex]) {
+			scores[levelIndex] = timeScore;
 			return true;
 		}
 		return false;

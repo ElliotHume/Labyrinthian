@@ -28,7 +28,6 @@ public class CameraMovement : MonoBehaviour {
 		if (moveCtrl.activeMovement == "camera") {
 			
 			if (moveCtrl.moveUp) {
-				Debug.Log (transform.rotation.eulerAngles [0]);
 				if (transform.rotation.eulerAngles [0] <= 80 || transform.rotation.eulerAngles [0] >= 270) {
 					transform.RotateAround (sphere.transform.localPosition, transform.right, movementSpeed);
 				}
@@ -39,7 +38,6 @@ public class CameraMovement : MonoBehaviour {
 				transform.RotateAround (sphere.transform.position, Vector3.down, movementSpeed);
 			}
 			if (moveCtrl.moveDown) {
-				Debug.Log (transform.rotation.eulerAngles [0]);
 				if (transform.rotation.eulerAngles [0] >= 280 || transform.rotation.eulerAngles [0] <= 90 ) {
 					transform.RotateAround (sphere.transform.localPosition, -transform.right, movementSpeed);
 				}

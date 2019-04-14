@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System;
 using System.Diagnostics;
 
@@ -11,14 +12,13 @@ public class BallBehavior : MonoBehaviour {
 	private bool isBig = false;
 	private bool sphereAsParent = true;
 	private GameObject sphere;
-	public Stopwatch timer = new Stopwatch();
+	public float timer = 0;
 
-	public UnityEngine.UI.Text timerText;
+	public Text timerText;
 
 	void OnTriggerEnter (Collider col) {
 		if (col.gameObject.tag == "Finish") {
-			timer.Stop ();
-			LevelManager.recordScore ( Convert.ToSingle(Math.Round(timer.Elapsed.TotalSeconds, 2)));
+			LevelManager.recordScore ( Convert.ToSingle(Math.Round((decimal)timer, 2)));
 			LevelManager.nextLevel();
 		}
 	}
@@ -32,20 +32,17 @@ public class BallBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sphere = GameObject.Find ("Sphere");
-		timer.Start ();
+		timerText = GameObject.Find ("Timer").GetComponent<Text>();
+		int levelIndex = SceneManager.GetActiveScene ().buildIndex;
+		GameObject.Find ("HighScore").GetComponent<Text>().text = LevelManager.scores [levelIndex] > 0 ? "Top Score:" + LevelManager.scores [levelIndex] : "Top Score: --.--";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		timerText.text = Convert.ToString (Math.Round (timer.Elapsed.TotalSeconds, 2));
-
-		if (LevelManager.isPaused) {
-			timer.Stop ();
-		} else {
-			if (!timer.IsRunning) {
-				timer.Start ();
-			}
+		if (!LevelManager.isPaused) {
+			timer += Time.deltaTime;
 		}
+		timerText.text = Convert.ToString (Math.Round (timer, 2));
 	}
 
 	public void changeMesh ( Mesh mesh ) {
@@ -65,14 +62,4 @@ public class BallBehavior : MonoBehaviour {
 	public void toggleGravity () {
 		gameObject.GetComponent<Rigidbody> ().useGravity = !gameObject.GetComponent<Rigidbody> ().useGravity;
 	}
-
-//	public void toggleShereAsParent () {
-//		if (sphereAsParent) {
-//			gameObject.transform.SetParent (gameObject.transform.parent.parent);
-//		} else {
-//			gameObject.transform.SetParent (sphere.transform);
-//		}
-//		sphereAsParent = !sphereAsParent;
-//	}
-
 }
