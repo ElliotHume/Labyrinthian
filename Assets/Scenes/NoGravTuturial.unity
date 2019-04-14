@@ -377,6 +377,11 @@ Prefab:
       propertyPath: isFlipLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114264741014677940, guid: ba692ed871173404985afc7567f2020e,
+        type: 2}
+      propertyPath: isNoGravLocked
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba692ed871173404985afc7567f2020e, type: 2}
   m_IsPrefabParent: 0
@@ -557,7 +562,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 632939965}
-  m_Text: 'Press "G" to
+  m_Text: 'Press "Up" to
 
     toggle gravity
 

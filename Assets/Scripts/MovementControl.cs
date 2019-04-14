@@ -55,16 +55,26 @@ public class MovementControl : MonoBehaviour {
 		float yAxis = Input.GetAxis ("Vertical");
 		float zAxis = Input.GetAxis ("Horizontal");
 
+
+		//foreach (string name in Input.GetJoystickNames()) {
+			//Debug.Log (name);
+		//}
+
 		float yAxis2 = Input.GetAxis ("Fire1");
 		float zAxis2 = Input.GetAxis ("Jump");
 
+		Debug.Log (yAxis);
+		Debug.Log (zAxis);
+		Debug.Log ("+"+yAxis2);
+		Debug.Log ("-"+zAxis2);
+
 		// Listen to inputs for movement commands and set movement flags
-		moveUp = Input.GetKey (KeyCode.W) || (yAxis == 1 && yAxis2 == 1);
-		moveLeft = Input.GetKey (KeyCode.A) || (yAxis == -1 && yAxis2 == 1);
-		moveDown = Input.GetKey (KeyCode.S) || (yAxis == -1 && yAxis2 == -1);
-		moveRight = Input.GetKey (KeyCode.D) || (yAxis == 1 && yAxis2 == -1);
-		rotateClockwise = Input.GetKey (KeyCode.E)|| (zAxis  == 1 && zAxis2 == 1);
-		rotateCounterClockwise = Input.GetKey (KeyCode.Q) || (zAxis == -1 && zAxis2 == -1);
+		moveUp = Input.GetKey (KeyCode.W) || (yAxis == 1 && zAxis2 == -1);
+		moveLeft = Input.GetKey (KeyCode.A) || (yAxis == -1 && zAxis2 == -1);
+		moveDown = Input.GetKey (KeyCode.S) || (yAxis == -1 && zAxis2 == 1);
+		moveRight = Input.GetKey (KeyCode.D) || (yAxis == 1 && zAxis2 == 1);
+		rotateClockwise = Input.GetKey (KeyCode.E)|| (zAxis  == 1 && yAxis2 == 1);
+		rotateCounterClockwise = Input.GetKey (KeyCode.Q) || (zAxis == -1 && yAxis2 == -1);
 
 
 		// Listen for button Inputs
@@ -84,20 +94,20 @@ public class MovementControl : MonoBehaviour {
 			uiFunctions.toggleCamera ();
 		}
 
-		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyUp ("joystick button 1") || Input.GetKeyDown("g")) {
+		if (Input.GetKeyDown ("joystick button 2") || Input.GetKeyDown("g")) {
 			if (!isNoGravLocked) {
 				ball.toggleGravity ();
 				uiFunctions.toggleNoGrav ();
 			}
 		}
 
-		if (Input.GetKeyDown ("joystick button 2") || Input.GetKeyDown("f")) {
+		if (Input.GetKeyDown ("joystick button 1") || Input.GetKeyDown("f")) {
 			if (!isFlipLocked) {
 				sphere.invertSphereVert ();
 				uiFunctions.toggleFlip ();
 			}
 		}
-
+	
 //		if (Input.GetKeyDown ("joystick button 5")) {
 //			ball.toggleShereAsParent ();
 //		}

@@ -334,8 +334,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194843709}
-  m_Text: "Press \"B\" to toggle \nmaking the ball bigger!\n\nUse this to get over
-    gaps\nand ride wide rails."
+  m_Text: "Press \"Right\" to toggle \nmaking the ball bigger!\n\nUse this to get
+    over gaps\nand ride wide rails."
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -821,29 +821,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
-        type: 2}
-      propertyPath: isBigBallLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+    - target: {fileID: 114264741014677940, guid: ba692ed871173404985afc7567f2020e,
         type: 2}
       propertyPath: isNoGravLocked
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
+    - target: {fileID: 114264741014677940, guid: ba692ed871173404985afc7567f2020e,
         type: 2}
-      propertyPath: isPillLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114145970715023788, guid: ba692ed871173404985afc7567f2020e,
-        type: 2}
-      propertyPath: isFlipLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
-        type: 2}
-      propertyPath: isFlipLocked
+      propertyPath: isBigBallLocked
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114976754897854304, guid: ba692ed871173404985afc7567f2020e,
@@ -855,16 +840,6 @@ Prefab:
         type: 2}
       propertyPath: isNoGravLocked
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224505632258950026, guid: ba692ed871173404985afc7567f2020e,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 224505632258950026, guid: ba692ed871173404985afc7567f2020e,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba692ed871173404985afc7567f2020e, type: 2}
