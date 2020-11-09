@@ -1,4 +1,4 @@
 # Labyrinthian
 325 Game assignment
 
-WRONG LINK: please go to ![LabyrinthianVR](https://github.com/ElliotHume/LabyrinthianVR)
+## WRONG LINK: please go to ![LabyrinthianVR](https://github.com/ElliotHume/LabyrinthianVR) to see the VR game ##
